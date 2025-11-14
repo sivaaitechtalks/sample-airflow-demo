@@ -1,1 +1,15 @@
 .venv
+logs/
+airflow.db
+airflow.sqlite3
+unittests.cfg
+*.pyc
+*.log
+__pycache__/
+dags/__pycache__/
+plugins/__pycache__/
+airflow-webserver.pid
+airflow-webserver.out
+airflow-webserver.err
+standalone_admin_password.txt
+*.generated

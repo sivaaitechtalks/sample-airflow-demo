@@ -1,9 +1,17 @@
+import logging
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
 
-def hello_task():
-    print("Hello from Airflow!")
+def datainjested():
+    logging.info("Data is injested")
+    
+def dataprocessing():
+    logging.info("Data is processed"
+        )
+    
+def dataloaded():
+    logging.info("Data is loaded")
 
 
 with DAG(
@@ -15,5 +23,16 @@ with DAG(
 
     hello = PythonOperator(
         task_id="hello_task",
-        python_callable=hello_task,
+        python_callable=datainjested,
     )
+    process = PythonOperator(
+        task_id="process_task",
+        python_callable=dataprocessing,
+    )
+    
+    load = PythonOperator(
+        task_id="load_task",    
+        python_callable=dataloaded,
+    )
+    
+    hello >> process >> load

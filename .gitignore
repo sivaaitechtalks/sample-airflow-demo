@@ -13,3 +13,7 @@ airflow-webserver.out
 airflow-webserver.err
 standalone_admin_password.txt
 *.generated
+airflow.db-shm
+airflow.db-wal
+*.db
+*.pid

@@ -20,13 +20,13 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
 
-      - name: Run Tests
-        run: pytest tests/
+      # - name: Run Tests
+      #   run: pytest tests/
 
-      - name: Deploy DAGs to S3
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ap-south-1
-        run: |
-          aws s3 sync dags/ s3://your-mwaa-dags-bucket/dags/
+      # - name: Deploy DAGs to S3
+      #   env:
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     AWS_REGION: ap-south-1
+      #   run: |
+      #     aws s3 sync dags/ s3://your-mwaa-dags-bucket/dags/

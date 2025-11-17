@@ -1,0 +1,2 @@
+data_injestion:
+  source_URL: 'https://github.com/ybifoundation/Dataset/raw/main/Salary%20Data.csv'

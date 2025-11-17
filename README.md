@@ -1,4 +1,6 @@
 🚀 Airflow Local Development Guide (VS Code + UI)
+############################################
+###########################################
 ##
 This guide walks you through setting up Airflow locally, creating a simple DAG, and running it both via CLI and the UI. It also covers best practices for git repo structure.
 
